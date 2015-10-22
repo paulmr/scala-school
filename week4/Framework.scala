@@ -9,10 +9,12 @@ object Main extends App {
   val template = Source.fromFile("template.html").getLines
 
   template foreach { line =>
-    if(line.matches(insertRegex))
+    if(line.matches(insertRegex)) {
+      //insertComponent
       println("[ insertComponent ]")
-    else
+    } else {
       println(line)
+    }
   }
 
 }
